@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=ntl-bench
+#SBATCH --job-name=ntl9-lf
 #SBATCH --output=we.errout
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:2
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task 20
-#SBATCH --time=48:00:00
+#SBATCH --time=24:00:00
 
 source /opt/installed/amber16/amber.sh
 
