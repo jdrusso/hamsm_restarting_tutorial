@@ -12,7 +12,7 @@ rm -rf seg_logs traj_segs
 rm -f west.h5
 mkdir seg_logs traj_segs 
 
-BSTATE_ARGS="--bstate start,1,ntl9.rst7"
+BSTATE_ARGS="--bstate start,1,istates/ntl9.rst7"
 #BSTATE_ARGS="--bstate-file bstates.txt"
 #BSTATE_ARGS="--bstates-from ref_files/initialstates.dat"
 TSTATE_ARGS="--tstate folded,0.99"
