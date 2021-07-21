@@ -1,8 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=ntl9-lf
+#SBATCH --job-name=ntl9-restarting
 #SBATCH --output=we.errout
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:2
+##SBATCH --partition=gpu
+##SBATCH --gres=gpu:2
+#SBATCH --partition=exacloud
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task 20
 #SBATCH --time=24:00:00
