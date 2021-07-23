@@ -1,4 +1,6 @@
 import logging
+import mdtraj as md
+import numpy as np
 
 from rich.logging import RichHandler
 
@@ -6,8 +8,6 @@ FORMAT = "%(message)s"
 logging.basicConfig(level="NOTSET", format=FORMAT, datefmt="[%X]", handlers=[RichHandler()])
 log = logging.getLogger("msm_we")
 log.setLevel(logging.DEBUG)
-
-import numpy as np
 
 
 def processCoordinates(self, coords):
