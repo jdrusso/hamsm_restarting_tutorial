@@ -35,6 +35,7 @@ case $WEST_CURRENT_SEG_INITPOINT_TYPE in
             ln -sv $WEST_PARENT_DATA_REF parent.rst7
             echo "linking $WEST_PARENT_DATA_REF"
         else
+            ######### This never runs #########
             ln -sv $WEST_SIM_ROOT/ref_files/ntl9.rst7 parent.rst7
 #            ln -sv $WEST_PARENT_DATA_REF parent.rst7
 #            echo "linking $WEST_PARENT_DATA_REF"
