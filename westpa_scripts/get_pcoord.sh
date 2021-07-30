@@ -15,7 +15,8 @@ echo "west data ref: $WEST_STRUCT_DATA_REF" > $WORK_DIR/wsdata.txt
 cp $WEST_STRUCT_DATA_REF $WORK_DIR/parent.rst7
 function cleanup() {
     cd $WEST_SIM_ROOT
-    rm -f $WORK_DIR/parent.rst7
+   #rm -f $WORK_DIR/parent.rst7
+    rm -rf $WORK_DIR
    #rm -f phi.dat psi.dat
 }
 
