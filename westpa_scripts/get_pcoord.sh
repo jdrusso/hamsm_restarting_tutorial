@@ -9,7 +9,7 @@ cd $WEST_SIM_ROOT
 echo 'I am here'
 #cp ntl9.rst7 parent.rst7
 
-WORK_DIR=`mktemp -d`
+WORK_DIR=`mktemp -d -p /mnt/scratch`
 
 echo "west data ref: $WEST_STRUCT_DATA_REF" > $WORK_DIR/wsdata.txt
 cp $WEST_STRUCT_DATA_REF $WORK_DIR/parent.rst7
