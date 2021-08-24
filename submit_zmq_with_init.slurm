@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=ntl9-2.5ns-r3
+#SBATCH --job-name=ntl9-hf-ext
 #SBATCH --output=we.errout
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:3
@@ -28,18 +28,16 @@ unset __conda_setup
 
 conda activate westpa_restarting
 
-#source env.sh
-#$WEST_ROOT/bin/w_run
-#$WEST_ROOT/bin/w_run  "$@" &>> west.log
+rm -rf traj_segs seg_logs
+mkdir traj_segs  seg_logs
 
-# w_init --tstate-file restart0/targetstates.txt --bstate-file restart0/basisstates.txt --sstate-file restart0/startstates.txt --segs-per-state 1
+BSTATE_ARGS="--bstate start,1,istates/ntl9.rst7"
+TSTATE_ARGS="--tstate folded,0.99"
+w_init $BSTATE_ARGS $TSTATE_ARGS --segs-per-state 4 | tee init.log
 
-#./init.sh 
+
 
 SERVER_INFO=west_zmq_info-$SLURM_JOBID.json
-
-w_init --tstate-file restart2/targetstates.txt --bstate-file restart2/basisstates.txt --sstate-file restart2/startstates.txt --segs-per-state 1
-#./init.sh
 
 w_run --zmq-startup-timeout 3600 --zmq-shutdown-timeout 360 --zmq-timeout-factor 240 --zmq-master-heartbeat 3 --zmq-worker-heartbeat 120 --work-manager=zmq --n-workers=0 --zmq-mode=master --zmq-write-host-info=$SERVER_INFO --zmq-comm-mode=ipc &> west-$SLURM_JOBID.out &
 
