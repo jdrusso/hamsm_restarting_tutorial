@@ -31,6 +31,8 @@ conda activate westpa_restarting
 rm -rf traj_segs seg_logs
 mkdir traj_segs  seg_logs
 
+rm restart.dat doing_extension
+
 BSTATE_ARGS="--bstate start,1,istates/ntl9.rst7"
 TSTATE_ARGS="--tstate folded,0.99"
 w_init $BSTATE_ARGS $TSTATE_ARGS --segs-per-state 4 | tee init.log
