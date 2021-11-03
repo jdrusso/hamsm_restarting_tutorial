@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=ntl9-hf-ext
+#SBATCH --job-name=ntl9-lf-rep1
 #SBATCH --output=we.errout
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:3
