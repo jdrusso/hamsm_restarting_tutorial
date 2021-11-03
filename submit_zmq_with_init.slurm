@@ -26,7 +26,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-conda activate westpa_restarting
+conda activate py38WEenv
 
 rm -rf traj_segs seg_logs
 mkdir traj_segs  seg_logs
