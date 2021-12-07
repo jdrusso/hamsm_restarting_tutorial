@@ -26,7 +26,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-conda activate py38WEenv
+conda activate msm_we_experimental
 
 rm -rf traj_segs seg_logs
 mkdir traj_segs  seg_logs
