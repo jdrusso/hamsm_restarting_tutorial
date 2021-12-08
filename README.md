@@ -1,8 +1,5 @@
-Initialize with `init.sh`, and then run with `submit_zmq.sh`
+# WESTPA haMSM Restarting Tutorial
 
 
-Suggested:
-```
-sbatch submit_init.sh
-sbatch --dependency=afterok:<jobid from first>
-```
+
+See [the main tutorial]("WESTPA haMSM Restarting Tutorial.md") for details on using the plugin, or [the Jupyter notebook](tutorial.ipynb) for a tutorial on using `msm_we` for haMSM analysis.
